@@ -93,7 +93,7 @@ public class ECKey implements Serializable {
      * Equal to CURVE.getN().shiftRight(1), used for canonicalising the S value of a signature.
      * ECDSA signatures are mutable in the sense that for a given (R, S) pair,
      * then both (R, S) and (R, N - S mod N) are valid signatures.
-     * Canonical signatures are those where 1 <= S <= N/2
+     * Canonical signatures are those where 1 &lt;= S &lt;= N/2
      * <p>
      * See https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki#Low_S_values_in_signatures
      */
@@ -287,8 +287,8 @@ public class ECKey implements Serializable {
     }
 
     /**
-     * Returns public key bytes from the given private key. To convert a byte array into a BigInteger, use <tt>
-     * new BigInteger(1, bytes);</tt>
+     * Returns public key bytes from the given private key. To convert a byte array into a BigInteger, use <code>
+     * new BigInteger(1, bytes);</code>
      *
      * @param privKey    -
      * @param compressed -
